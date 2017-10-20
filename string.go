@@ -35,6 +35,6 @@ func Substr(str string, start int, length int) string {
 验证手机号格式
 */
 func CheckMobile(mobile string) bool {
-	regular := "/^1\\d{10}$/"
+	regular := "/^13\\d{9}$|^14\\d{9}$|^15\\d{9}$|^17\\d{9}$|^18\\d{9}$/"
 	return regexp.MustCompile(regular).MatchString(mobile)
 }
